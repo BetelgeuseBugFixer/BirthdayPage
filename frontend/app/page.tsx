@@ -16,7 +16,7 @@ export default function Home() {
     setStatus("loading");
 
     try {
-      const response = await fetch("http://birthdaypage-production.up.railway.app/api/rsvp", {
+      const response = await fetch("https://birthdaypage-production.up.railway.app/api/rsvp", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
