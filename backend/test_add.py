@@ -1,7 +1,7 @@
 import requests
 
 # The URL of your local FastAPI server
-url = "http://127.0.0.1:8000/api/rsvp"
+url = " https://birthdaypage-production.up.railway.app/api/rsvp"
 
 # The test data matching your GuestRSVP model
 test_data = {
