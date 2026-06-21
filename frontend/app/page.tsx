@@ -47,45 +47,62 @@ export default function Home() {
 
     return (
         <main
-            className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900 p-4 transition-colors duration-200">
+            className="min-h-screen flex items-center justify-center bg-gradient-to-br from-rose-100 via-purple-100 to-teal-100 dark:from-rose-950 dark:via-purple-900 dark:to-teal-950 p-4 transition-colors duration-200">
             <div
-                className="w-full max-w-3xl bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 border border-gray-200 dark:border-gray-700">
+                className="w-full max-w-4xl bg-white dark:bg-slate-800 rounded-2xl shadow-2xl p-8 md:p-12 border border-slate-100 dark:border-slate-700">
 
                 {view === "info" ? (
-                    <div className="space-y-8 md:space-y-12">
-                        <div>
-                            <h1 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white text-center">
-                                Einladung zum 60. Geburtstag
-                            </h1>
-                            <p className="text-center text-gray-500 dark:text-gray-400 text-lg md:text-xl mt-3">
-                                Feiere einen besonderen Abend mit mir!
-                            </p>
+                    <div className="space-y-10 md:space-y-14">
+
+                        {/* HEADER WITH PHOTOS */}
+                        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+                            {/* Left Photo - Replace src with your image path (e.g., "/photo1.jpg") */}
+                            <div
+                                className="w-28 h-28 md:w-36 md:h-36 rounded-full overflow-hidden border-4 border-amber-100 dark:border-amber-900 shadow-md flex-shrink-0 bg-slate-200">
+                                <img src="/left.jpeg" alt="Janni" className="w-full h-full object-cover object-center"/>
+                            </div>
+
+                            <div className="text-center flex-1">
+                                <h1 className="text-4xl md:text-5xl font-extrabold text-slate-800 dark:text-white tracking-tight">
+                                    Einladung zum 60.
+                                </h1>
+                                <p className="text-amber-600 dark:text-amber-400 text-lg md:text-xl mt-3 font-medium">
+                                    Feiere einen besonderen Abend mit mir!
+                                </p>
+                            </div>
+
+                            {/* Right Photo - Replace src with your image path */}
+                            <div
+                                className="w-28 h-28 md:w-36 md:h-36 rounded-full overflow-hidden border-4 border-amber-100 dark:border-amber-900 shadow-md flex-shrink-0 bg-slate-200">
+                                <img src="/right.jpeg" alt="Janni"
+                                     className="w-full h-full object-cover object-center"/>
+                            </div>
                         </div>
 
                         <div
-                            className="text-lg md:text-xl text-gray-700 dark:text-gray-300 space-y-6 md:space-y-8 leading-relaxed">
+                            className="text-lg md:text-xl text-slate-600 dark:text-slate-300 space-y-6 md:space-y-8 leading-relaxed text-center md:text-left">
                             <p>
                                 Liebe Freunde, liebe Familie!
                             </p>
                             <p>
-                                Mein <strong className="text-gray-900 dark:text-white">60ter Geburtstag</strong> steht
+                                Mein <strong className="text-slate-800 dark:text-white">60. Geburtstag</strong> steht
                                 vor der Tür und das möchte ich gemeinsam mit euch feiern!
-                                Am <strong className="text-blue-600 dark:text-blue-400">16. Oktober</strong> lade ich
+                                Am <strong className="text-amber-600 dark:text-amber-400">16. Oktober</strong> lade ich
                                 euch herzlich ins
-                                <strong className="text-gray-900 dark:text-white"> „Gasthaus“ in Bad Tölz</strong> ein.
-                                Los geht’s ab <strong className="text-gray-900 dark:text-white">19:00 Uhr</strong>.
+                                <strong className="text-slate-800 dark:text-white"> „Gasthaus“ in Bad Tölz</strong> ein.
+                                Los geht’s ab <strong className="text-slate-800 dark:text-white">19:00 Uhr</strong>.
                                 Erlebt mit mir einen Abend voller Tanz, gutem Essen, schöner Gespräche und feiert unsere
                                 Freundschaft.
                             </p>
                             <p>
-                                Ich würde mich ausserdem riesig freuen, wenn jede*r von euch ein <strong
-                                className="text-gray-900 dark:text-white">Foto mitbringt</strong>,
+                                Ich würde mich außerdem riesig freuen, wenn jede*r von euch ein <strong
+                                className="text-slate-800 dark:text-white">Foto mitbringt</strong>,
                                 das uns gemeinsam zeigt – als schöne Erinnerung an die gemeinsamen Momente.
                             </p>
 
-                            {/* Infobox with Bullet Points */}
+                            {/* Infobox */}
                             <div
-                                className="bg-gray-100 dark:bg-gray-700/50 p-6 md:p-10 rounded-xl border border-gray-200 dark:border-gray-600 shadow-inner">
+                                className="bg-slate-50 dark:bg-slate-700/40 p-6 md:p-8 rounded-2xl border border-slate-200 dark:border-slate-600 shadow-inner text-left">
                                 <ul className="space-y-5 md:space-y-6">
                                     <li className="flex items-start">
                                         <span className="mr-4 text-2xl">📅</span>
@@ -94,16 +111,16 @@ export default function Home() {
                                     <li className="flex items-start">
                                         <span className="mr-4 text-2xl">📍</span>
                                         <span>
-                                                <strong>Wo:</strong> „Gasthaus“
-                                                <a
-                                                    href="https://maps.app.goo.gl/tTZqZ3cwzskkzN5N6"
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                    className="text-blue-600 dark:text-blue-400 hover:underline ml-1"
-                                                >
-                                                    Bahnhofstrasse 2, 83646 Bad Tölz
-                                                </a>
-                                            </span>
+                                            <strong>Wo:</strong> „Gasthaus“
+                                            <a
+                                                href="https://maps.app.goo.gl/tTZqZ3cwzskkzN5N6"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-amber-600 dark:text-amber-400 hover:text-amber-700 underline decoration-amber-300 ml-1 transition-colors"
+                                            >
+                                                Bahnhofstraße 2, 83646 Bad Tölz
+                                            </a>
+                                        </span>
                                     </li>
                                     <li className="flex items-start">
                                         <span className="mr-4 text-2xl">👔</span>
@@ -113,48 +130,80 @@ export default function Home() {
                                         <span className="mr-4 text-2xl">📸</span>
                                         <span><strong>Mitbringen:</strong> Ein Foto, das uns gemeinsam zeigt</span>
                                     </li>
-                                    <li className="flex items-start text-blue-600 dark:text-blue-400 font-bold">
+                                    <li className="flex items-start text-amber-600 dark:text-amber-400 font-bold">
                                         <span className="mr-4 text-2xl">⏳</span>
                                         <span><strong>Rückmeldung:</strong> Bitte bis zum 30. September</span>
                                     </li>
                                 </ul>
                             </div>
 
-                            <p className="text-center font-bold pt-4 text-xl md:text-2xl text-gray-900 dark:text-white">
+                            <p className="text-center font-bold pt-6 text-xl md:text-2xl text-slate-800 dark:text-white">
                                 Ich freue mich auf einen unvergesslichen Abend mit euch!
                             </p>
                             <button
                                 onClick={() => setView("form")}
-                                className="w-full text-lg md:text-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-6 rounded-xl transition-colors shadow-lg"
+                                className="w-full text-lg md:text-xl bg-amber-600 hover:bg-amber-700 text-white font-bold py-4 px-6 rounded-xl transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                             >
                                 Zur Anmeldung
                             </button>
                         </div>
                     </div>
                 ) : (
-                    <>
-                        <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center">
+                    <div className="max-w-xl mx-auto">
+                        <h1 className="text-3xl font-extrabold text-slate-800 dark:text-white mb-8 text-center">
                             Anmeldung
                         </h1>
 
                         {status === "success" ? (
-                            <div className="text-center p-4 bg-green-50 dark:bg-green-900/30 rounded-lg space-y-4">
-                                <p className="text-green-700 dark:text-green-400 font-medium">
-                                    Vielen Dank, ich freue mich auf dich
-                                </p>
-                                <button
-                                    onClick={() => setView("info")}
-                                    className="text-blue-600 dark:text-blue-400 hover:underline text-sm font-medium"
-                                >
-                                    Zurück zur Übersicht
-                                </button>
-                            </div>
+<div className="text-center p-8 bg-green-50 dark:bg-green-900/30 rounded-2xl border border-green-100 dark:border-green-800 space-y-6">
+    <p className="text-green-700 dark:text-green-400 text-xl font-bold">
+        Vielen Dank, ich freue mich auf dich! 🎉
+    </p>
+
+    {/* Flex container to stack the buttons vertically with a gap */}
+    <div className="flex flex-col items-center justify-center gap-5 mt-4">
+        <button
+            onClick={() => {
+                // Reset status and form data to show a clean form
+                setStatus("idle");
+                setFormData({
+                    guest_name: "",
+                    attending: true,
+                    plus_one: 0,
+                    bringing_food: "",
+                    hp_field: "",
+                });
+            }}
+            className="text-amber-600 dark:text-amber-400 hover:text-amber-700 font-semibold transition-colors bg-amber-50 dark:bg-amber-900/20 px-4 py-2 rounded-lg"
+        >
+            + Weitere Person anmelden
+        </button>
+
+        <button
+            onClick={() => {
+                setView("info");
+                setStatus("idle");
+                setFormData({
+                    guest_name: "",
+                    attending: true,
+                    plus_one: 0,
+                    bringing_food: "",
+                    hp_field: "",
+                });
+            }
+        }
+            className="text-amber-600 dark:text-amber-400 hover:text-amber-700 font-semibold transition-colors bg-amber-50 dark:bg-amber-900/20 px-4 py-2 rounded-lg"
+        >
+            ← Zurück zur Übersicht
+        </button>
+    </div>
+</div>
                         ) : (
-                            <form onSubmit={handleSubmit} className="space-y-4">
-                                {/* Guest Name */}
+                            <form onSubmit={handleSubmit} className="space-y-5">
                                 <div>
-                                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                                        Name
+                                    <label
+                                        className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">
+                                        Dein Name
                                     </label>
                                     <input
                                         type="text"
@@ -162,29 +211,29 @@ export default function Home() {
                                         required
                                         value={formData.guest_name}
                                         onChange={handleChange}
-                                        className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 outline-none"
-                                        placeholder="Janni"
+                                        className="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-600 bg-slate-50 dark:bg-slate-700 text-slate-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition-all"
+                                        placeholder="Max Mustermann"
                                     />
                                 </div>
 
-                                {/* Attending Checkbox */}
-                                <div className="flex items-center space-x-3 py-2">
+                                <div
+                                    className="flex items-center space-x-3 py-3 px-4 bg-slate-50 dark:bg-slate-700/50 rounded-xl border border-slate-200 dark:border-slate-600">
                                     <input
                                         type="checkbox"
                                         name="attending"
                                         checked={formData.attending}
                                         onChange={handleChange}
-                                        className="w-5 h-5 text-blue-600 rounded border-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:ring-blue-500"
+                                        className="w-5 h-5 text-amber-600 rounded border-slate-300 dark:border-slate-500 focus:ring-amber-500"
                                     />
-                                    <label className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                                        Ich bin dabei
+                                    <label className="text-base font-semibold text-slate-700 dark:text-slate-200">
+                                        Ich bin dabei!
                                     </label>
                                 </div>
 
-                                {/* Plus Ones */}
                                 <div>
-                                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                                        Begleitung
+                                    <label
+                                        className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">
+                                        Anzahl Begleitpersonen
                                     </label>
                                     <input
                                         type="number"
@@ -192,63 +241,55 @@ export default function Home() {
                                         min="0"
                                         value={formData.plus_one}
                                         onChange={handleChange}
-                                        className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 outline-none"
+                                        className="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-600 bg-slate-50 dark:bg-slate-700 text-slate-900 dark:text-white focus:ring-2 focus:ring-amber-500 outline-none transition-all"
                                     />
                                 </div>
 
-                                {/* Bringing Food */}
                                 <div>
-                                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                                        Ich bringe Essen mit
+                                    <label
+                                        className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">
+                                        Musikwünsche (optional)
                                     </label>
                                     <input
                                         type="text"
                                         name="bringing_food"
                                         value={formData.bringing_food}
                                         onChange={handleChange}
-                                        className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 outline-none"
-                                        placeholder="Wurstsalat"
+                                        className="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-600 bg-slate-50 dark:bg-slate-700 text-slate-900 dark:text-white focus:ring-2 focus:ring-amber-500 outline-none transition-all"
+                                        placeholder="Z.B. Abba: Gimme! Gimme! Gimme!"
                                     />
                                 </div>
 
-                                {/* hp field */}
                                 <div className="hidden" aria-hidden="true">
-                                    <input
-                                        type="text"
-                                        name="hp_field"
-                                        value={formData.hp_field}
-                                        onChange={handleChange}
-                                        tabIndex={-1}
-                                        autoComplete="off"
-                                    />
+                                    <input type="text" name="hp_field" value={formData.hp_field} onChange={handleChange}
+                                           tabIndex={-1}/>
                                 </div>
 
-                                {/* Buttons */}
-                                <div className="pt-4 space-y-3">
+                                <div className="pt-6 space-y-4">
                                     <button
                                         type="submit"
                                         disabled={status === "loading"}
-                                        className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors disabled:opacity-50"
+                                        className="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-4 px-6 rounded-xl transition-all shadow-md disabled:opacity-50"
                                     >
-                                        {status === "loading" ? "Submitting..." : "Send RSVP"}
+                                        {status === "loading" ? "Wird gesendet..." : "Antwort abschicken"}
                                     </button>
                                     <button
                                         type="button"
                                         onClick={() => setView("info")}
-                                        className="w-full bg-transparent border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 font-semibold py-2 px-4 rounded-lg transition-colors"
+                                        className="w-full bg-transparent hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 font-semibold py-3 px-4 rounded-xl transition-colors"
                                     >
-                                        Zurück zur Übersicht
+                                        Abbrechen & Zurück
                                     </button>
                                 </div>
 
                                 {status === "error" && (
-                                    <p className="text-red-600 dark:text-red-400 text-sm text-center mt-2">
-                                        Something went wrong. Please check your backend connection.
+                                    <p className="text-red-600 dark:text-red-400 text-sm text-center font-medium mt-2">
+                                        Es gab einen Fehler. Bitte versuche es später erneut.
                                     </p>
                                 )}
                             </form>
                         )}
-                    </>
+                    </div>
                 )}
             </div>
         </main>
