@@ -71,7 +71,6 @@ export default function Home() {
                                 </p>
                             </div>
 
-                            {/* Right Photo - Replace src with your image path */}
                             <div
                                 className="w-28 h-28 md:w-36 md:h-36 rounded-full overflow-hidden border-4 border-amber-100 dark:border-amber-900 shadow-md flex-shrink-0 bg-slate-200">
                                 <img src="/right.jpeg" alt="Janni"
@@ -97,7 +96,7 @@ export default function Home() {
                             <p>
                                 Ich würde mich außerdem riesig freuen, wenn jede*r von euch ein <strong
                                 className="text-slate-800 dark:text-white">Foto mitbringt</strong>,
-                                das uns gemeinsam zeigt – als schöne Erinnerung an die gemeinsamen Momente.
+                                das uns zusammen zeigt – als schöne Erinnerung an die gemeinsamen Momente.
                             </p>
 
                             {/* Infobox */}
@@ -130,6 +129,10 @@ export default function Home() {
                                         <span className="mr-4 text-2xl">📸</span>
                                         <span><strong>Mitbringen:</strong> Ein Foto, das uns gemeinsam zeigt</span>
                                     </li>
+                                    <li className="flex items-start">
+                                        <span className="mr-4 text-2xl">🎁</span>
+                                        <span><strong>Geschenk:</strong> Kein Stress: es gibt eine Box, wo ihr was rein werfen könnt, damit ich mir einen Herzenswunsch erfüllen kann.</span>
+                                    </li>
                                     <li className="flex items-start text-amber-600 dark:text-amber-400 font-bold">
                                         <span className="mr-4 text-2xl">⏳</span>
                                         <span><strong>Rückmeldung:</strong> Bitte bis zum 30. September</span>
@@ -138,20 +141,20 @@ export default function Home() {
                             </div>
 
                             <p className="text-center font-bold pt-6 text-xl md:text-2xl text-slate-800 dark:text-white">
-                                Ich freue mich auf einen unvergesslichen Abend mit euch!
+                                Ich freue mich auf einen wunderschönen Abend mit euch!
                             </p>
                             <button
                                 onClick={() => setView("form")}
                                 className="w-full text-lg md:text-xl bg-amber-600 hover:bg-amber-700 text-white font-bold py-4 px-6 rounded-xl transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                             >
-                                Zur Anmeldung
+                                Zu/Absage
                             </button>
                         </div>
                     </div>
                 ) : (
                     <div className="max-w-xl mx-auto">
                         <h1 className="text-3xl font-extrabold text-slate-800 dark:text-white mb-8 text-center">
-                            Anmeldung
+                            Zu/Absage
                         </h1>
 
                         {status === "success" ? (
@@ -176,7 +179,7 @@ export default function Home() {
             }}
             className="text-amber-600 dark:text-amber-400 hover:text-amber-700 font-semibold transition-colors bg-amber-50 dark:bg-amber-900/20 px-4 py-2 rounded-lg"
         >
-            + Weitere Person anmelden
+            + Für weitere Person zu- oder absagen
         </button>
 
         <button
