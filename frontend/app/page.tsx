@@ -158,49 +158,50 @@ export default function Home() {
                         </h1>
 
                         {status === "success" ? (
-<div className="text-center p-8 bg-green-50 dark:bg-green-900/30 rounded-2xl border border-green-100 dark:border-green-800 space-y-6">
-    <p className="text-green-700 dark:text-green-400 text-xl font-bold">
-        Vielen Dank, ich freue mich auf dich! 🎉
-    </p>
+                            <div
+                                className="text-center p-8 bg-green-50 dark:bg-green-900/30 rounded-2xl border border-green-100 dark:border-green-800 space-y-6">
+                                <p className="text-green-700 dark:text-green-400 text-xl font-bold">
+                                    {formData.attending ? "Vielen Dank, ich freue mich auf dich! 🎉" : "Schade, dass du nicht dabei bist! 😢"}
+                                </p>
 
-    {/* Flex container to stack the buttons vertically with a gap */}
-    <div className="flex flex-col items-center justify-center gap-5 mt-4">
-        <button
-            onClick={() => {
-                // Reset status and form data to show a clean form
-                setStatus("idle");
-                setFormData({
-                    guest_name: "",
-                    attending: true,
-                    plus_one: 0,
-                    bringing_food: "",
-                    hp_field: "",
-                });
-            }}
-            className="text-amber-600 dark:text-amber-400 hover:text-amber-700 font-semibold transition-colors bg-amber-50 dark:bg-amber-900/20 px-4 py-2 rounded-lg"
-        >
-            + Für weitere Person zu- oder absagen
-        </button>
+                                {/* Flex container to stack the buttons vertically with a gap */}
+                                <div className="flex flex-col items-center justify-center gap-5 mt-4">
+                                    <button
+                                        onClick={() => {
+                                            // Reset status and form data to show a clean form
+                                            setStatus("idle");
+                                            setFormData({
+                                                guest_name: "",
+                                                attending: true,
+                                                plus_one: 0,
+                                                bringing_food: "",
+                                                hp_field: "",
+                                            });
+                                        }}
+                                        className="text-amber-600 dark:text-amber-400 hover:text-amber-700 font-semibold transition-colors bg-amber-50 dark:bg-amber-900/20 px-4 py-2 rounded-lg"
+                                    >
+                                        + Für weitere Person zu- oder absagen
+                                    </button>
 
-        <button
-            onClick={() => {
-                setView("info");
-                setStatus("idle");
-                setFormData({
-                    guest_name: "",
-                    attending: true,
-                    plus_one: 0,
-                    bringing_food: "",
-                    hp_field: "",
-                });
-            }
-        }
-            className="text-amber-600 dark:text-amber-400 hover:text-amber-700 font-semibold transition-colors bg-amber-50 dark:bg-amber-900/20 px-4 py-2 rounded-lg"
-        >
-            ← Zurück zur Übersicht
-        </button>
-    </div>
-</div>
+                                    <button
+                                        onClick={() => {
+                                            setView("info");
+                                            setStatus("idle");
+                                            setFormData({
+                                                guest_name: "",
+                                                attending: true,
+                                                plus_one: 0,
+                                                bringing_food: "",
+                                                hp_field: "",
+                                            });
+                                        }
+                                        }
+                                        className="text-amber-600 dark:text-amber-400 hover:text-amber-700 font-semibold transition-colors bg-amber-50 dark:bg-amber-900/20 px-4 py-2 rounded-lg"
+                                    >
+                                        ← Zurück zur Übersicht
+                                    </button>
+                                </div>
+                            </div>
                         ) : (
                             <form onSubmit={handleSubmit} className="space-y-5">
                                 <div>
